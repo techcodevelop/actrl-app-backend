@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DB_DIALECT = exports.DB_PORT = exports.DB_DATABASE = exports.DB_PASSWORD = exports.DB_USER = exports.DB_HOST = exports.PORT = void 0;
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)();
+exports.PORT = parseInt(process.env.PORT || "5000", 10);
+exports.DB_HOST = process.env.DB_HOST || "viaduct.proxy.rlwy.net";
+exports.DB_USER = process.env.DB_USER || "root";
+exports.DB_PASSWORD = process.env.DB_PASSWORD || "eWHrREXFAdkIfKINxjrXvsdRrwobylTN";
+exports.DB_DATABASE = process.env.DB_DATABASE || "railway";
+exports.DB_PORT = parseInt(process.env.DB_PORT || "23429", 10);
+exports.DB_DIALECT = process.env.DB_DIALECT || 'mysql';
